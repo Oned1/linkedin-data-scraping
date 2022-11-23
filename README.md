@@ -34,7 +34,7 @@ db = mysql.connector.connect(
     database = "selenium_test"
 )
 ```
-#Searching For The Given Job In Linkedin
+# Searching For The Given Job In Linkedin
 In the code block below we are creating our class and defining our Selenium Driver Location. For some people the driver might work without a given path but i am going to use it in this way.<br><br>
 In the function of "search()" we are going to build our way to Linkedin's job search page and put our given parameters in the inputs of that page.<br><br>
 We are giving a time.sleep for one second because we want our page to be fully loaded before putting our inputs in the input boxes.<br><br>
