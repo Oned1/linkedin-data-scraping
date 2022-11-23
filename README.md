@@ -102,7 +102,6 @@ You might think that giving a "time.sleep()" will do the work and make our websc
         job_Type = NULL
         job_Description = NULL
         click_Count = 1
-        #Sıra ile iş ilanlarına tıklar ve içerisindeki çeşitli verileri alır
         for click in range (150):
             try:
                 driver.find_element(By.XPATH, f'//*[@id="main-content"]/section[2]/ul/li[{click_Count}]/div/a').click()
@@ -111,8 +110,7 @@ You might think that giving a "time.sleep()" will do the work and make our websc
                     driver.find_element(By.XPATH, f'//*[@id="main-content"]/section[2]/ul/li[{click_Count}]/a').click()
                 except:
                     break
-                 
-            #İlan içerisindeki "Tam Zamanlı/Yarı Zamanlı/Stajyer" bilgisini çeker. 
+              
             j = 0
             while(True):
                 time.sleep(0.5)
@@ -137,7 +135,7 @@ You might think that giving a "time.sleep()" will do the work and make our websc
                         driver.find_element(By.XPATH, f'//*[@id="main-content"]/section[2]/ul/li[{click_Count-1}]/div/a').click()
                         time.sleep(1)
                         driver.find_element(By.XPATH, f'//*[@id="main-content"]/section[2]/ul/li[{click_Count}]/div/a').click()
-                        #
+                        
                         time.sleep(0.5)
                         try:
                             job_Type = driver.find_element(By.XPATH, '/html/body/div[1]/div/section/div[2]/div/section[1]/div/ul/li[2]/span').text
@@ -156,13 +154,13 @@ You might think that giving a "time.sleep()" will do the work and make our websc
                             except:
                                 job_Description = driver.find_element(By.XPATH, '/html/body/div[1]/div/section/div[2]/div/section[1]/div/div[2]/section/div').text
                                 break
-                        #
+                        
 
                     except:
                         driver.find_element(By.XPATH, f'//*[@id="main-content"]/section[2]/ul/li[{click_Count-1}]/a').click() 
                         time.sleep(1)
                         driver.find_element(By.XPATH, f'//*[@id="main-content"]/section[2]/ul/li[{click_Count}]/div/a').click()
-                        #
+                        
                         time.sleep(0.5)
                         try:
                             job_Type = driver.find_element(By.XPATH, '/html/body/div[1]/div/section/div[2]/div/section[1]/div/ul/li[2]/span').text
@@ -179,7 +177,7 @@ You might think that giving a "time.sleep()" will do the work and make our websc
                             except:
                                 job_Description = driver.find_element(By.XPATH, '/html/body/div[1]/div/section/div[2]/div/section[1]/div/div[2]/section/div').text
                             break
-                        #
+                        
 ```
 To explain the code better, what we are doing in this code block is trying to click to the job posts and pull their description and working type data. You can exaggerate this and pull other data types that is stated inside of the job post.<br><br>
 Now, as i stated at the start of this article, our job type data (Internship / Full Time etc.) doesn't have a constant place or path. It changes depending on how firms post their job advertisements. But no need to worry, even tho it changes its place, it only have 3–4 alternative place and it will be in one of them. So we are checking all those places until we find the data we look for.<br><br>
@@ -202,7 +200,7 @@ After that we can call our functions at the end and use our web scraper by givin
 #THIS PART IS OUTSIDE OF THE CLASS
 start = time.time()
 
-linkedin = Linkedin("c++", "istanbul") #You should put your own parameters here.
+linkedin = Linkedin("C++", "istanbul") #You should put your own parameters here.
 linkedin.search()
 linkedin.jobList() 
 
