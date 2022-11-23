@@ -1,4 +1,4 @@
-# How to webscrape linkedin with Python?
+# How to Webscrape Linkedin with Python?
 I was looking for the answer of this question when i started doing a little side project with my friend. Apperiently there is no good open source linkedin web scraper in the market.<br><br>
 The ones i saw was either paid or poorly made. Like the ones that only scrapes titles of the listed jobs and doesn't click on it to scrape more complex details.<br><br>
 It is important to point out what exactly i wanted to web scrape. So let me wrap it out with a quick summary of what i intended to do.<br><br>
