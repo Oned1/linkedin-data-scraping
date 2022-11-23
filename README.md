@@ -9,7 +9,7 @@ It is important to point out what exactly i wanted to web scrape. So let me wrap
 
 # Required Components
 **Python -** You can easily install Python from it's official website. It is free and it doesn't require a license. To be able to write your code better at Python i would suggest you to use a code editor such as Visual Studio Code.<br><br>
-**Selenium -** It is a widely used open source webscraping framework for Python and many other coding languages. To install it in your Python you should use the command below in your cmd.exe(Windows Command Processor). 
+**Selenium -** It is a widely used open source webscraping framework for Python and many other coding languages. To install it in your Python you should use the command below in your cmd.exe (Windows Command Processor). 
 ```python
 pip install selenium
 ```
