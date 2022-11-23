@@ -90,7 +90,6 @@ After that and some little error handling, we are inserting our freshly scraped 
                 b = (driver.find_element(By.XPATH, f'//*[@id="main-content"]/section[2]/ul/li[{y}]/a/div[2]/div/time').text)
                 job_PostDates.append(b)
                 print(driver.find_element(By.XPATH, f'//*[@id="main-content"]/section[2]/ul/li[{y}]/a/div[2]/div/time').text)         
-                print(f"Hata kodu id [{y}]---------------------------------------------------------------------------------")
 
             print("\n")
             mycursor.execute(f"INSERT INTO jobs (title, location, company_name, post_date) VALUES ('{job_Titles[x].text}', '{job_Locations[x].text}', '{job_CompanyNames[x].text}', '{job_PostDates[x]}');")
