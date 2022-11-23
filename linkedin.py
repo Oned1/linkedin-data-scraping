@@ -35,7 +35,7 @@ class Linkedin:
 
     def jobList(self):
         time.sleep(3)
-
+zsfdgserg
         for x in range (10):
             driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
             time.sleep(1)
